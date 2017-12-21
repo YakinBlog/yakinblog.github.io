@@ -1,7 +1,7 @@
 ---
 title: Hexo+Github搭建个人博客
 #categories: 教程
-tags: [hexo, github, nodejs] 
+tags: [hexo, github, nodejs, 教程] 
 description: Hexo+Github搭建个人博客
 ---
 [Hexo](https://hexo.io/)是一款基于[NodeJS](https://nodejs.org)的静态博客框架，以下介绍的是在Mac系统下的搭建过程，简单实用，足够满足个人点滴的分享和记录，而无需个人服务器，可绑定域名。
