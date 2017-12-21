@@ -82,3 +82,32 @@ deploy:
   repo: git@github.com:YakinBlog/yakinblog.github.io.git
   #git的方式可以轻易配置免密码deploy，而用http/https的地址每次deploy都需要输入密码
   branch: master
+
+sitemap:
+    path: sitemap.xml
+baidusitemap:
+    path: baidusitemap.xm
+
+feed:
+    type: atom
+    path: atom.xml
+    limit: 100
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
