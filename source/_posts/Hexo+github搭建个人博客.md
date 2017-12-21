@@ -115,6 +115,33 @@ $ hexo g[generate]
 $ hexo d[deploy]
 ```
 
+## 配置域名
+
+### 域名解析
+
+以万网为例：
+域名->解析->添加解析
+
+|记录类型|主机记录|解析线路|记录值|TTL值|
+|:----|:----:|----:|----:|----:|
+|CNAME|www|默认|yakinblog.github.io|10分钟|
+|A|@|默认|192.30.252.153|10分钟|
+|A|@|默认|192.30.252.154|10分钟|
+
+记录类型选A或CNAME，A记录的记录值就是ip地址，github(官方)提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，解析记录设置两个www和@，其他的默认即可，CNAME记录值填github博客网址。
+
+### 站点配置
+
+创建写有域名的CNAME文件，放到根目录下source目录里，如我的CNAME域名：yakinblog.com
+
+``` bash
+$ echo [域名] > source/CNAME
+```
+
+重新部署站点，即可使用 [yakinblog.com](http://yakinblog.com/) 访问站点。
+
+注意：CNAME里的域名如果带有www，如www.yakinblog.com，则访问时只能使用www.yakinblog.com访问，如果不带www，如yakinblog.com，则www.yakinblog.com和yakinblog.com都可访问。
+
 ## 问题收集
 
 ### 找不到git部署
