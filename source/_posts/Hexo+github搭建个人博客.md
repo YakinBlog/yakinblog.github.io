@@ -39,7 +39,7 @@ $ hexo init
 $ hexo s[server]
 ```
 
-在浏览器里访问(http://localhost:4000)， 预览博客。
+在浏览器里访问 http://localhost:4000 ， 预览博客。
 
 ## 部署到github
 
@@ -66,7 +66,7 @@ $ sudo npm install hexo-deployer-git --save
 $ hexo deploy
 ```
 
-访问[http://your_user_name.github.io](https://yakinblog.github.io/)，就可以浏览你的博客站点了！！！
+访问 [http://your_user_name.github.io](https://yakinblog.github.io/) ，就可以浏览你的博客站点了！！！
 站点默认部署到master分支，可建hexo分支存放站点源码。
 
 ## Hexo 常用命令
