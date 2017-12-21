@@ -79,7 +79,9 @@ hexo n[new] "我的博客"
 
 More info: [Writing](https://hexo.io/docs/writing.html)
 
-### 启动服务，服务会检测文件变动自动更新，无需重启服务
+### 启动服务
+
+服务会检测文件变动自动更新，无需重启服务
 
 ``` bash
 $ hexo s[server]
