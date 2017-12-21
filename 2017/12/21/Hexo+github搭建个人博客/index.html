@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Yakin的博客">
 <meta property="og:description" content="Hexo+Github搭建个人博客">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
-<meta property="og:updated_time" content="2017-12-21T10:11:21.000Z">
+<meta property="og:updated_time" content="2017-12-21T14:08:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github搭建个人博客">
 <meta name="twitter:description" content="Hexo+Github搭建个人博客">
@@ -199,6 +199,46 @@
 <h3 id="部署到远程仓库"><a href="#部署到远程仓库" class="headerlink" title="部署到远程仓库"></a>部署到远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d[deploy]</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 <h3 id="修改后，重新部署"><a href="#修改后，重新部署" class="headerlink" title="修改后，重新部署"></a>修改后，重新部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean <span class="comment">#清理缓存</span></span><br><span class="line">$ hexo g[generate]</span><br><span class="line">$ hexo d[deploy]</span><br></pre></td></tr></table></figure>
+<h2 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h2><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>以万网为例：<br>域名-&gt;解析-&gt;添加解析</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">记录类型</th>
+<th style="text-align:center">主机记录</th>
+<th style="text-align:right">解析线路</th>
+<th style="text-align:right">记录值</th>
+<th style="text-align:right">TTL值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CNAME</td>
+<td style="text-align:center">www</td>
+<td style="text-align:right">默认</td>
+<td style="text-align:right">yakinblog.github.io</td>
+<td style="text-align:right">10分钟</td>
+</tr>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">默认</td>
+<td style="text-align:right">192.30.252.153</td>
+<td style="text-align:right">10分钟</td>
+</tr>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">默认</td>
+<td style="text-align:right">192.30.252.154</td>
+<td style="text-align:right">10分钟</td>
+</tr>
+</tbody>
+</table>
+<p>记录类型选A或CNAME，A记录的记录值就是ip地址，github(官方)提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，解析记录设置两个www和@，其他的默认即可，CNAME记录值填github博客网址。</p>
+<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>创建写有域名的CNAME文件，放到根目录下source目录里，如我的CNAME域名：yakinblog.com</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> [域名] &gt; <span class="built_in">source</span>/CNAME</span><br></pre></td></tr></table></figure>
+<p>重新部署站点，即可使用 <a href="http://yakinblog.com/">yakinblog.com</a> 访问站点。</p>
+<p>注意：CNAME里的域名如果带有www，如www.yakinblog.com，则访问时只能使用www.yakinblog.com访问，如果不带www，如yakinblog.com，则www.yakinblog.com和yakinblog.com都可访问。</p>
 <h2 id="问题收集"><a href="#问题收集" class="headerlink" title="问题收集"></a>问题收集</h2><h3 id="找不到git部署"><a href="#找不到git部署" class="headerlink" title="找不到git部署"></a>找不到git部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
