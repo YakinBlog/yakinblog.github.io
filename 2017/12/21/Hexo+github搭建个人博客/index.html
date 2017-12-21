@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yakinblog.com">
-  <title>Archives: 2017/12 | Yakin的博客</title>
+  <title>Hexo+Github搭建个人博客 | Yakin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yakin的博客">
-<meta property="og:url" content="http://yakinblog.com/archives/2017/12/index.html">
+  <meta name="description" content="Hexo+Github搭建个人博客">
+<meta name="keywords" content="hexo,github,nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github搭建个人博客">
+<meta property="og:url" content="http://yakinblog.com/2017/12/21/Hexo+github搭建个人博客/index.html">
 <meta property="og:site_name" content="Yakin的博客">
+<meta property="og:description" content="Hexo+Github搭建个人博客">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
+<meta property="og:updated_time" content="2017-12-21T08:42:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yakin的博客">
+<meta name="twitter:title" content="Hexo+Github搭建个人博客">
+<meta name="twitter:description" content="Hexo+Github搭建个人博客">
   
     <link rel="alternative" href="/atom.xml" title="Yakin的博客" type="application/atom+xml">
   
@@ -151,36 +155,88 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Hexo+github搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/21/Hexo+github搭建个人博客/" class="archive-article-date">
-  	<time datetime="2017-12-21T07:04:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/21/Hexo+github搭建个人博客/">Hexo+Github搭建个人博客</a>
+    <h1 class="article-title" itemprop="name">
+      Hexo+Github搭建个人博客
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/12/21/Hexo+github搭建个人博客/" class="archive-article-date">
+  	<time datetime="2017-12-21T07:04:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是一款基于<a href="https://nodejs.org" target="_blank" rel="noopener">NodeJS</a>的静态博客框架，以下介绍的是在Mac系统下的搭建过程，简单实用，足够满足个人点滴的分享和记录，而无需个人服务器，可绑定域名。</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="必要软件"><a href="#必要软件" class="headerlink" title="必要软件"></a>必要软件</h3><p>XCode：<a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">APP Store</a>下载安装<br>Git：XCode内置有git，或者<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网</a>下载<br>NodeJS：<a href="https://nodejs.org" target="_blank" rel="noopener">官网</a>下载<br>Npm：安装NodeJS时会连带安装</p>
+<h2 id="搭建站点"><a href="#搭建站点" class="headerlink" title="搭建站点"></a>搭建站点</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><p>新建一个空文件夹blog, 在blog文件夹下运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<h3 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s[server]</span><br></pre></td></tr></table></figure>
+<p>在浏览器里访问(<a href="http://localhost:4000)，" target="_blank" rel="noopener">http://localhost:4000)，</a> 预览博客。</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>在github上创建个同账号名的repository，仓库名为：your_user_name.github.io<br>再修改blog/_config.yml配置文件，与github建立关联。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:your_user_name/your_user_name.github.io.git</span><br><span class="line">  <span class="comment">#git的方式可以轻易配置免密码deploy，而用http/https的地址每次deploy都需要输入密码</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>安装部署插件包:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>执行deploy命令就可以将生成的静态页面push到github中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>访问<a href="https://yakinblog.github.io/" target="_blank" rel="noopener">http://your_user_name.github.io</a>，就可以浏览你的博客站点了！！！<br>站点默认部署到master分支，可建hexo分支存放站点源码。</p>
+<h2 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n[new] <span class="string">"我的博客"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="启动服务，服务会检测文件变动自动更新，无需重启服务"><a href="#启动服务，服务会检测文件变动自动更新，无需重启服务" class="headerlink" title="启动服务，服务会检测文件变动自动更新，无需重启服务"></a>启动服务，服务会检测文件变动自动更新，无需重启服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s[server]</span><br><span class="line">	-s <span class="comment">#静态模式</span></span><br><span class="line">	-p [端口号] <span class="comment">#更新端口号</span></span><br><span class="line">	-i [ip] <span class="comment">#更新IP</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g[generate]</span><br><span class="line">	--watch <span class="comment">#监控文件变动</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="部署到远程仓库"><a href="#部署到远程仓库" class="headerlink" title="部署到远程仓库"></a>部署到远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d[deploy]</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="修改后，重新部署"><a href="#修改后，重新部署" class="headerlink" title="修改后，重新部署"></a>修改后，重新部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean <span class="comment">#清理缓存</span></span><br><span class="line">$ hexo g[generate]</span><br><span class="line">$ hexo d[deploy]</span><br></pre></td></tr></table></figure>
+<h2 id="问题收集"><a href="#问题收集" class="headerlink" title="问题收集"></a>问题收集</h2><h3 id="找不到git部署"><a href="#找不到git部署" class="headerlink" title="找不到git部署"></a>找不到git部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h3 id="xcodebuild"><a href="#xcodebuild" class="headerlink" title="xcodebuild"></a>xcodebuild</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select: error: tool <span class="string">'xcodebuild'</span> requires Xcode, but active developer directory <span class="string">'/Library/Developer/CommandLineTools'</span> is a <span class="built_in">command</span> line tools instance</span><br></pre></td></tr></table></figure>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install bcrypt</span><br></pre></td></tr></table></figure>
+<h3 id="RSS不显示"><a href="#RSS不显示" class="headerlink" title="RSS不显示"></a>RSS不显示</h3><p>安装RSS插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<p>开启RSS功能，编辑hexo/_config.yml，添加如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rss: /atom.xml <span class="comment">#rss地址  默认即可</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -200,7 +256,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -213,17 +269,94 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yakinblog.com/2017/12/21/Hexo+github搭建个人博客/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -246,8 +379,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
