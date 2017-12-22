@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Yakin的博客">
 <meta property="og:description" content="Alpha对照表，常用颜色">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
-<meta property="og:updated_time" content="2017-12-22T03:37:20.000Z">
+<meta property="og:updated_time" content="2017-12-22T06:05:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Alpha对照表+常用颜色">
 <meta name="twitter:description" content="Alpha对照表，常用颜色">
@@ -175,7 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是一款基于<a href="https://nodejs.org" target="_blank" rel="noopener">NodeJS</a>的静态博客框架，以下介绍的是在Mac系统下的搭建过程，简单实用，足够满足个人点滴的分享和记录，而无需个人服务器，可绑定域名。</p>
+        <p>一般颜色是由ARGB构成，在程序中可以用8位十六进制值表示，前2位表示A（透明度），后6位表示RGB（颜色）。</p>
+<h3 id="透明度"><a href="#透明度" class="headerlink" title="透明度"></a>透明度</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder str = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> round = Math.round(<span class="number">255</span> * i * <span class="number">1.0f</span> / <span class="number">100f</span>);</span><br><span class="line">    String hexString = Integer.toHexString(round);</span><br><span class="line">    <span class="keyword">if</span> (hexString.length() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        hexString += <span class="string">"0"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    str.append(<span class="string">"|"</span> + i + <span class="string">"%|"</span> + hexString.toUpperCase());</span><br><span class="line">    <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        str.append(<span class="string">"|"</span>);</span><br><span class="line">        System.out.println(str.toString());</span><br><span class="line">        str.delete(<span class="number">0</span>, str.length());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对照表： </p>
 <table>
 <thead>
 <tr>
@@ -183,20 +185,24 @@
 <th style="text-align:center">16进制</th>
 <th style="text-align:right">透明度</th>
 <th style="text-align:right">16进制</th>
-<th style="text-align:right">透明度</th>
-<th style="text-align:right">16进制</th>
-<th style="text-align:right">透明度</th>
-<th style="text-align:right">16进制</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left">全透</td>
+<td style="text-align:center">00</td>
+<td style="text-align:right">不透</td>
+<td style="text-align:right">FF</td>
+</tr>
 <tr>
 <td style="text-align:left">1%</td>
 <td style="text-align:center">30</td>
 <td style="text-align:right">2%</td>
 <td style="text-align:right">50</td>
-<td style="text-align:right">3%</td>
-<td style="text-align:right">80</td>
+</tr>
+<tr>
+<td style="text-align:left">3%</td>
+<td style="text-align:center">80</td>
 <td style="text-align:right">4%</td>
 <td style="text-align:right">A0</td>
 </tr>
@@ -205,8 +211,10 @@
 <td style="text-align:center">D0</td>
 <td style="text-align:right">6%</td>
 <td style="text-align:right">F0</td>
-<td style="text-align:right">7%</td>
-<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td style="text-align:left">7%</td>
+<td style="text-align:center">12</td>
 <td style="text-align:right">8%</td>
 <td style="text-align:right">14</td>
 </tr>
@@ -215,8 +223,10 @@
 <td style="text-align:center">17</td>
 <td style="text-align:right">10%</td>
 <td style="text-align:right">1A</td>
-<td style="text-align:right">11%</td>
-<td style="text-align:right">1C</td>
+</tr>
+<tr>
+<td style="text-align:left">11%</td>
+<td style="text-align:center">1C</td>
 <td style="text-align:right">12%</td>
 <td style="text-align:right">1F</td>
 </tr>
@@ -225,8 +235,10 @@
 <td style="text-align:center">21</td>
 <td style="text-align:right">14%</td>
 <td style="text-align:right">24</td>
-<td style="text-align:right">15%</td>
-<td style="text-align:right">26</td>
+</tr>
+<tr>
+<td style="text-align:left">15%</td>
+<td style="text-align:center">26</td>
 <td style="text-align:right">16%</td>
 <td style="text-align:right">29</td>
 </tr>
@@ -235,8 +247,10 @@
 <td style="text-align:center">2B</td>
 <td style="text-align:right">18%</td>
 <td style="text-align:right">2E</td>
-<td style="text-align:right">19%</td>
-<td style="text-align:right">30</td>
+</tr>
+<tr>
+<td style="text-align:left">19%</td>
+<td style="text-align:center">30</td>
 <td style="text-align:right">20%</td>
 <td style="text-align:right">33</td>
 </tr>
@@ -245,8 +259,10 @@
 <td style="text-align:center">36</td>
 <td style="text-align:right">22%</td>
 <td style="text-align:right">38</td>
-<td style="text-align:right">23%</td>
-<td style="text-align:right">3B</td>
+</tr>
+<tr>
+<td style="text-align:left">23%</td>
+<td style="text-align:center">3B</td>
 <td style="text-align:right">24%</td>
 <td style="text-align:right">3D</td>
 </tr>
@@ -255,8 +271,10 @@
 <td style="text-align:center">40</td>
 <td style="text-align:right">26%</td>
 <td style="text-align:right">42</td>
-<td style="text-align:right">27%</td>
-<td style="text-align:right">45</td>
+</tr>
+<tr>
+<td style="text-align:left">27%</td>
+<td style="text-align:center">45</td>
 <td style="text-align:right">28%</td>
 <td style="text-align:right">47</td>
 </tr>
@@ -265,8 +283,10 @@
 <td style="text-align:center">4A</td>
 <td style="text-align:right">30%</td>
 <td style="text-align:right">4D</td>
-<td style="text-align:right">31%</td>
-<td style="text-align:right">4F</td>
+</tr>
+<tr>
+<td style="text-align:left">31%</td>
+<td style="text-align:center">4F</td>
 <td style="text-align:right">32%</td>
 <td style="text-align:right">52</td>
 </tr>
@@ -275,8 +295,10 @@
 <td style="text-align:center">54</td>
 <td style="text-align:right">34%</td>
 <td style="text-align:right">57</td>
-<td style="text-align:right">35%</td>
-<td style="text-align:right">59</td>
+</tr>
+<tr>
+<td style="text-align:left">35%</td>
+<td style="text-align:center">59</td>
 <td style="text-align:right">36%</td>
 <td style="text-align:right">5C</td>
 </tr>
@@ -285,8 +307,10 @@
 <td style="text-align:center">5E</td>
 <td style="text-align:right">38%</td>
 <td style="text-align:right">61</td>
-<td style="text-align:right">39%</td>
-<td style="text-align:right">63</td>
+</tr>
+<tr>
+<td style="text-align:left">39%</td>
+<td style="text-align:center">63</td>
 <td style="text-align:right">40%</td>
 <td style="text-align:right">66</td>
 </tr>
@@ -295,8 +319,10 @@
 <td style="text-align:center">69</td>
 <td style="text-align:right">42%</td>
 <td style="text-align:right">6B</td>
-<td style="text-align:right">43%</td>
-<td style="text-align:right">6E</td>
+</tr>
+<tr>
+<td style="text-align:left">43%</td>
+<td style="text-align:center">6E</td>
 <td style="text-align:right">44%</td>
 <td style="text-align:right">70</td>
 </tr>
@@ -305,8 +331,10 @@
 <td style="text-align:center">73</td>
 <td style="text-align:right">46%</td>
 <td style="text-align:right">75</td>
-<td style="text-align:right">47%</td>
-<td style="text-align:right">78</td>
+</tr>
+<tr>
+<td style="text-align:left">47%</td>
+<td style="text-align:center">78</td>
 <td style="text-align:right">48%</td>
 <td style="text-align:right">7A</td>
 </tr>
@@ -315,8 +343,10 @@
 <td style="text-align:center">7D</td>
 <td style="text-align:right">50%</td>
 <td style="text-align:right">80</td>
-<td style="text-align:right">51%</td>
-<td style="text-align:right">82</td>
+</tr>
+<tr>
+<td style="text-align:left">51%</td>
+<td style="text-align:center">82</td>
 <td style="text-align:right">52%</td>
 <td style="text-align:right">85</td>
 </tr>
@@ -325,8 +355,10 @@
 <td style="text-align:center">87</td>
 <td style="text-align:right">54%</td>
 <td style="text-align:right">8A</td>
-<td style="text-align:right">55%</td>
-<td style="text-align:right">8C</td>
+</tr>
+<tr>
+<td style="text-align:left">55%</td>
+<td style="text-align:center">8C</td>
 <td style="text-align:right">56%</td>
 <td style="text-align:right">8F</td>
 </tr>
@@ -335,8 +367,10 @@
 <td style="text-align:center">91</td>
 <td style="text-align:right">58%</td>
 <td style="text-align:right">94</td>
-<td style="text-align:right">59%</td>
-<td style="text-align:right">96</td>
+</tr>
+<tr>
+<td style="text-align:left">59%</td>
+<td style="text-align:center">96</td>
 <td style="text-align:right">60%</td>
 <td style="text-align:right">99</td>
 </tr>
@@ -345,8 +379,10 @@
 <td style="text-align:center">9C</td>
 <td style="text-align:right">62%</td>
 <td style="text-align:right">9E</td>
-<td style="text-align:right">63%</td>
-<td style="text-align:right">A1</td>
+</tr>
+<tr>
+<td style="text-align:left">63%</td>
+<td style="text-align:center">A1</td>
 <td style="text-align:right">64%</td>
 <td style="text-align:right">A3</td>
 </tr>
@@ -355,8 +391,10 @@
 <td style="text-align:center">A6</td>
 <td style="text-align:right">66%</td>
 <td style="text-align:right">A8</td>
-<td style="text-align:right">67%</td>
-<td style="text-align:right">AB</td>
+</tr>
+<tr>
+<td style="text-align:left">67%</td>
+<td style="text-align:center">AB</td>
 <td style="text-align:right">68%</td>
 <td style="text-align:right">AD</td>
 </tr>
@@ -365,8 +403,10 @@
 <td style="text-align:center">B0</td>
 <td style="text-align:right">70%</td>
 <td style="text-align:right">B3</td>
-<td style="text-align:right">71%</td>
-<td style="text-align:right">B5</td>
+</tr>
+<tr>
+<td style="text-align:left">71%</td>
+<td style="text-align:center">B5</td>
 <td style="text-align:right">72%</td>
 <td style="text-align:right">B8</td>
 </tr>
@@ -375,8 +415,10 @@
 <td style="text-align:center">BA</td>
 <td style="text-align:right">74%</td>
 <td style="text-align:right">BD</td>
-<td style="text-align:right">75%</td>
-<td style="text-align:right">BF</td>
+</tr>
+<tr>
+<td style="text-align:left">75%</td>
+<td style="text-align:center">BF</td>
 <td style="text-align:right">76%</td>
 <td style="text-align:right">C2</td>
 </tr>
@@ -385,8 +427,10 @@
 <td style="text-align:center">C4</td>
 <td style="text-align:right">78%</td>
 <td style="text-align:right">C7</td>
-<td style="text-align:right">79%</td>
-<td style="text-align:right">C9</td>
+</tr>
+<tr>
+<td style="text-align:left">79%</td>
+<td style="text-align:center">C9</td>
 <td style="text-align:right">80%</td>
 <td style="text-align:right">CC</td>
 </tr>
@@ -395,8 +439,10 @@
 <td style="text-align:center">CF</td>
 <td style="text-align:right">82%</td>
 <td style="text-align:right">D1</td>
-<td style="text-align:right">83%</td>
-<td style="text-align:right">D4</td>
+</tr>
+<tr>
+<td style="text-align:left">83%</td>
+<td style="text-align:center">D4</td>
 <td style="text-align:right">84%</td>
 <td style="text-align:right">D6</td>
 </tr>
@@ -405,8 +451,10 @@
 <td style="text-align:center">D9</td>
 <td style="text-align:right">86%</td>
 <td style="text-align:right">DB</td>
-<td style="text-align:right">87%</td>
-<td style="text-align:right">DE</td>
+</tr>
+<tr>
+<td style="text-align:left">87%</td>
+<td style="text-align:center">DE</td>
 <td style="text-align:right">88%</td>
 <td style="text-align:right">E0</td>
 </tr>
@@ -415,8 +463,10 @@
 <td style="text-align:center">E3</td>
 <td style="text-align:right">90%</td>
 <td style="text-align:right">E6</td>
-<td style="text-align:right">91%</td>
-<td style="text-align:right">E8</td>
+</tr>
+<tr>
+<td style="text-align:left">91%</td>
+<td style="text-align:center">E8</td>
 <td style="text-align:right">92%</td>
 <td style="text-align:right">EB</td>
 </tr>
@@ -425,8 +475,10 @@
 <td style="text-align:center">ED</td>
 <td style="text-align:right">94%</td>
 <td style="text-align:right">F0</td>
-<td style="text-align:right">95%</td>
-<td style="text-align:right">F2</td>
+</tr>
+<tr>
+<td style="text-align:left">95%</td>
+<td style="text-align:center">F2</td>
 <td style="text-align:right">96%</td>
 <td style="text-align:right">F5</td>
 </tr>
@@ -435,87 +487,17 @@
 <td style="text-align:center">F7</td>
 <td style="text-align:right">98%</td>
 <td style="text-align:right">FA</td>
-<td style="text-align:right">99%</td>
-<td style="text-align:right">FC</td>
+</tr>
+<tr>
+<td style="text-align:left">99%</td>
+<td style="text-align:center">FC</td>
 <td style="text-align:right">100%</td>
 <td style="text-align:right">FF</td>
 </tr>
 </tbody>
 </table>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="必要软件"><a href="#必要软件" class="headerlink" title="必要软件"></a>必要软件</h3><p>XCode：<a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">APP Store</a>下载安装<br>Git：XCode内置有git，或者<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网</a>下载<br>NodeJS：<a href="https://nodejs.org" target="_blank" rel="noopener">官网</a>下载<br>Npm：安装NodeJS时会连带安装</p>
-<h2 id="搭建站点"><a href="#搭建站点" class="headerlink" title="搭建站点"></a>搭建站点</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><p>新建一个空文件夹blog, 在blog文件夹下运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<h3 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s[server]</span><br></pre></td></tr></table></figure>
-<p>在浏览器里访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ， 预览博客。</p>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>在github上创建个同账号名的repository，仓库名为：your_user_name.github.io<br>再修改blog/_config.yml配置文件，与github建立关联。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:your_user_name/your_user_name.github.io.git</span><br><span class="line">  <span class="comment">#git的方式可以轻易配置免密码deploy，而用http/https的地址每次deploy都需要输入密码</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>安装部署插件包:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>执行deploy命令就可以将生成的静态页面push到github中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>访问 <a href="https://yakinblog.github.io/" target="_blank" rel="noopener">http://your_user_name.github.io</a> ，就可以浏览你的博客站点了！！！<br>站点默认部署到master分支，可建hexo分支存放站点源码。</p>
-<h2 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n[new] <span class="string">"我的博客"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>服务会检测文件变动自动更新，无需重启服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s[server]</span><br><span class="line">	-s <span class="comment">#静态模式</span></span><br><span class="line">	-p [端口号] <span class="comment">#更新端口号</span></span><br><span class="line">	-i [ip] <span class="comment">#更新IP</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g[generate]</span><br><span class="line">	--watch <span class="comment">#监控文件变动</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="部署到远程仓库"><a href="#部署到远程仓库" class="headerlink" title="部署到远程仓库"></a>部署到远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d[deploy]</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="修改后，重新部署"><a href="#修改后，重新部署" class="headerlink" title="修改后，重新部署"></a>修改后，重新部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean <span class="comment">#清理缓存</span></span><br><span class="line">$ hexo g[generate]</span><br><span class="line">$ hexo d[deploy]</span><br></pre></td></tr></table></figure>
-<h2 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h2><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>以万网为例：<br>域名-&gt;解析-&gt;添加解析</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">记录类型</th>
-<th style="text-align:center">主机记录</th>
-<th style="text-align:right">解析线路</th>
-<th style="text-align:right">记录值</th>
-<th style="text-align:right">TTL值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">CNAME</td>
-<td style="text-align:center">www</td>
-<td style="text-align:right">默认</td>
-<td style="text-align:right">yakinblog.github.io</td>
-<td style="text-align:right">10分钟</td>
-</tr>
-<tr>
-<td style="text-align:left">A</td>
-<td style="text-align:center">@</td>
-<td style="text-align:right">默认</td>
-<td style="text-align:right">192.30.252.153</td>
-<td style="text-align:right">10分钟</td>
-</tr>
-<tr>
-<td style="text-align:left">A</td>
-<td style="text-align:center">@</td>
-<td style="text-align:right">默认</td>
-<td style="text-align:right">192.30.252.154</td>
-<td style="text-align:right">10分钟</td>
-</tr>
-</tbody>
-</table>
-<p>记录类型选A或CNAME，A记录的记录值就是ip地址，github(官方)提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，解析记录设置两个www和@，其他的默认即可，CNAME记录值填github博客网址。</p>
-<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>创建写有域名的CNAME文件，放到根目录下source目录里，如我的CNAME域名：yakinblog.com</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> [域名] &gt; <span class="built_in">source</span>/CNAME</span><br></pre></td></tr></table></figure>
-<p>重新部署站点，即可使用 <a href="http://yakinblog.com/">yakinblog.com</a> 访问站点。</p>
-<p>注意：CNAME里的域名如果带有www，如www.yakinblog.com，则访问时只能使用www.yakinblog.com访问，如果不带www，如yakinblog.com，则www.yakinblog.com和yakinblog.com都可访问。</p>
-<h2 id="问题收集"><a href="#问题收集" class="headerlink" title="问题收集"></a>问题收集</h2><h3 id="找不到git部署"><a href="#找不到git部署" class="headerlink" title="找不到git部署"></a>找不到git部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h3 id="xcodebuild"><a href="#xcodebuild" class="headerlink" title="xcodebuild"></a>xcodebuild</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select: error: tool <span class="string">'xcodebuild'</span> requires Xcode, but active developer directory <span class="string">'/Library/Developer/CommandLineTools'</span> is a <span class="built_in">command</span> line tools instance</span><br></pre></td></tr></table></figure>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install bcrypt</span><br></pre></td></tr></table></figure>
-<h3 id="RSS不显示"><a href="#RSS不显示" class="headerlink" title="RSS不显示"></a>RSS不显示</h3><p>安装RSS插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-<p>开启RSS功能，编辑hexo/_config.yml，添加如下代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rss: /atom.xml <span class="comment">#rss地址  默认即可</span></span><br></pre></td></tr></table></figure>
+<h3 id="常用色"><a href="#常用色" class="headerlink" title="常用色"></a>常用色</h3><p>分享几个常用色配色网站：<a href="http://colorhunt.co/" target="_blank" rel="noopener">Color Hunt</a>、<a href="https://color.adobe.com/" target="_blank" rel="noopener">Adobe Color</a>, <a href="http://colllor.com/" target="_blank" rel="noopener">Colllor</a></p>
+<h3 id="取色器"><a href="#取色器" class="headerlink" title="取色器"></a>取色器</h3><iframe src="http://tools.jb51.net/static/rgbcolor/index.html" id="CenterMainCenter" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" width="100%" height="460px"></iframe>
 
       
 
