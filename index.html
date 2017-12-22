@@ -153,20 +153,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Alpha对照表+常用颜色" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Alpha对照表-调色板" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/21/Alpha对照表+常用颜色/">Alpha对照表+常用颜色</a>
+      <a class="article-title" href="/2017/12/22/Alpha对照表-调色板/">Alpha对照表+调色板</a>
     </h1>
   
 
         
-        <a href="/2017/12/21/Alpha对照表+常用颜色/" class="archive-article-date">
-  	<time datetime="2017-12-21T03:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
+        <a href="/2017/12/22/Alpha对照表-调色板/" class="archive-article-date">
+  	<time datetime="2017-12-22T06:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
 </a>
         
       </header>
@@ -175,328 +175,9 @@
       
         <p>一般颜色是由ARGB构成，在程序中可以用8位十六进制值表示，前2位表示A（透明度），后6位表示RGB（颜色）。</p>
 <h3 id="透明度"><a href="#透明度" class="headerlink" title="透明度"></a>透明度</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder str = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> round = Math.round(<span class="number">255</span> * i * <span class="number">1.0f</span> / <span class="number">100f</span>);</span><br><span class="line">    String hexString = Integer.toHexString(round);</span><br><span class="line">    <span class="keyword">if</span> (hexString.length() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        hexString += <span class="string">"0"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    str.append(<span class="string">"|"</span> + i + <span class="string">"%|"</span> + hexString.toUpperCase());</span><br><span class="line">    <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        str.append(<span class="string">"|"</span>);</span><br><span class="line">        System.out.println(str.toString());</span><br><span class="line">        str.delete(<span class="number">0</span>, str.length());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对照表： </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">透明度</th>
-<th style="text-align:center">16进制</th>
-<th style="text-align:right">透明度</th>
-<th style="text-align:right">16进制</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">全透</td>
-<td style="text-align:center">00</td>
-<td style="text-align:right">不透</td>
-<td style="text-align:right">FF</td>
-</tr>
-<tr>
-<td style="text-align:left">1%</td>
-<td style="text-align:center">30</td>
-<td style="text-align:right">2%</td>
-<td style="text-align:right">50</td>
-</tr>
-<tr>
-<td style="text-align:left">3%</td>
-<td style="text-align:center">80</td>
-<td style="text-align:right">4%</td>
-<td style="text-align:right">A0</td>
-</tr>
-<tr>
-<td style="text-align:left">5%</td>
-<td style="text-align:center">D0</td>
-<td style="text-align:right">6%</td>
-<td style="text-align:right">F0</td>
-</tr>
-<tr>
-<td style="text-align:left">7%</td>
-<td style="text-align:center">12</td>
-<td style="text-align:right">8%</td>
-<td style="text-align:right">14</td>
-</tr>
-<tr>
-<td style="text-align:left">9%</td>
-<td style="text-align:center">17</td>
-<td style="text-align:right">10%</td>
-<td style="text-align:right">1A</td>
-</tr>
-<tr>
-<td style="text-align:left">11%</td>
-<td style="text-align:center">1C</td>
-<td style="text-align:right">12%</td>
-<td style="text-align:right">1F</td>
-</tr>
-<tr>
-<td style="text-align:left">13%</td>
-<td style="text-align:center">21</td>
-<td style="text-align:right">14%</td>
-<td style="text-align:right">24</td>
-</tr>
-<tr>
-<td style="text-align:left">15%</td>
-<td style="text-align:center">26</td>
-<td style="text-align:right">16%</td>
-<td style="text-align:right">29</td>
-</tr>
-<tr>
-<td style="text-align:left">17%</td>
-<td style="text-align:center">2B</td>
-<td style="text-align:right">18%</td>
-<td style="text-align:right">2E</td>
-</tr>
-<tr>
-<td style="text-align:left">19%</td>
-<td style="text-align:center">30</td>
-<td style="text-align:right">20%</td>
-<td style="text-align:right">33</td>
-</tr>
-<tr>
-<td style="text-align:left">21%</td>
-<td style="text-align:center">36</td>
-<td style="text-align:right">22%</td>
-<td style="text-align:right">38</td>
-</tr>
-<tr>
-<td style="text-align:left">23%</td>
-<td style="text-align:center">3B</td>
-<td style="text-align:right">24%</td>
-<td style="text-align:right">3D</td>
-</tr>
-<tr>
-<td style="text-align:left">25%</td>
-<td style="text-align:center">40</td>
-<td style="text-align:right">26%</td>
-<td style="text-align:right">42</td>
-</tr>
-<tr>
-<td style="text-align:left">27%</td>
-<td style="text-align:center">45</td>
-<td style="text-align:right">28%</td>
-<td style="text-align:right">47</td>
-</tr>
-<tr>
-<td style="text-align:left">29%</td>
-<td style="text-align:center">4A</td>
-<td style="text-align:right">30%</td>
-<td style="text-align:right">4D</td>
-</tr>
-<tr>
-<td style="text-align:left">31%</td>
-<td style="text-align:center">4F</td>
-<td style="text-align:right">32%</td>
-<td style="text-align:right">52</td>
-</tr>
-<tr>
-<td style="text-align:left">33%</td>
-<td style="text-align:center">54</td>
-<td style="text-align:right">34%</td>
-<td style="text-align:right">57</td>
-</tr>
-<tr>
-<td style="text-align:left">35%</td>
-<td style="text-align:center">59</td>
-<td style="text-align:right">36%</td>
-<td style="text-align:right">5C</td>
-</tr>
-<tr>
-<td style="text-align:left">37%</td>
-<td style="text-align:center">5E</td>
-<td style="text-align:right">38%</td>
-<td style="text-align:right">61</td>
-</tr>
-<tr>
-<td style="text-align:left">39%</td>
-<td style="text-align:center">63</td>
-<td style="text-align:right">40%</td>
-<td style="text-align:right">66</td>
-</tr>
-<tr>
-<td style="text-align:left">41%</td>
-<td style="text-align:center">69</td>
-<td style="text-align:right">42%</td>
-<td style="text-align:right">6B</td>
-</tr>
-<tr>
-<td style="text-align:left">43%</td>
-<td style="text-align:center">6E</td>
-<td style="text-align:right">44%</td>
-<td style="text-align:right">70</td>
-</tr>
-<tr>
-<td style="text-align:left">45%</td>
-<td style="text-align:center">73</td>
-<td style="text-align:right">46%</td>
-<td style="text-align:right">75</td>
-</tr>
-<tr>
-<td style="text-align:left">47%</td>
-<td style="text-align:center">78</td>
-<td style="text-align:right">48%</td>
-<td style="text-align:right">7A</td>
-</tr>
-<tr>
-<td style="text-align:left">49%</td>
-<td style="text-align:center">7D</td>
-<td style="text-align:right">50%</td>
-<td style="text-align:right">80</td>
-</tr>
-<tr>
-<td style="text-align:left">51%</td>
-<td style="text-align:center">82</td>
-<td style="text-align:right">52%</td>
-<td style="text-align:right">85</td>
-</tr>
-<tr>
-<td style="text-align:left">53%</td>
-<td style="text-align:center">87</td>
-<td style="text-align:right">54%</td>
-<td style="text-align:right">8A</td>
-</tr>
-<tr>
-<td style="text-align:left">55%</td>
-<td style="text-align:center">8C</td>
-<td style="text-align:right">56%</td>
-<td style="text-align:right">8F</td>
-</tr>
-<tr>
-<td style="text-align:left">57%</td>
-<td style="text-align:center">91</td>
-<td style="text-align:right">58%</td>
-<td style="text-align:right">94</td>
-</tr>
-<tr>
-<td style="text-align:left">59%</td>
-<td style="text-align:center">96</td>
-<td style="text-align:right">60%</td>
-<td style="text-align:right">99</td>
-</tr>
-<tr>
-<td style="text-align:left">61%</td>
-<td style="text-align:center">9C</td>
-<td style="text-align:right">62%</td>
-<td style="text-align:right">9E</td>
-</tr>
-<tr>
-<td style="text-align:left">63%</td>
-<td style="text-align:center">A1</td>
-<td style="text-align:right">64%</td>
-<td style="text-align:right">A3</td>
-</tr>
-<tr>
-<td style="text-align:left">65%</td>
-<td style="text-align:center">A6</td>
-<td style="text-align:right">66%</td>
-<td style="text-align:right">A8</td>
-</tr>
-<tr>
-<td style="text-align:left">67%</td>
-<td style="text-align:center">AB</td>
-<td style="text-align:right">68%</td>
-<td style="text-align:right">AD</td>
-</tr>
-<tr>
-<td style="text-align:left">69%</td>
-<td style="text-align:center">B0</td>
-<td style="text-align:right">70%</td>
-<td style="text-align:right">B3</td>
-</tr>
-<tr>
-<td style="text-align:left">71%</td>
-<td style="text-align:center">B5</td>
-<td style="text-align:right">72%</td>
-<td style="text-align:right">B8</td>
-</tr>
-<tr>
-<td style="text-align:left">73%</td>
-<td style="text-align:center">BA</td>
-<td style="text-align:right">74%</td>
-<td style="text-align:right">BD</td>
-</tr>
-<tr>
-<td style="text-align:left">75%</td>
-<td style="text-align:center">BF</td>
-<td style="text-align:right">76%</td>
-<td style="text-align:right">C2</td>
-</tr>
-<tr>
-<td style="text-align:left">77%</td>
-<td style="text-align:center">C4</td>
-<td style="text-align:right">78%</td>
-<td style="text-align:right">C7</td>
-</tr>
-<tr>
-<td style="text-align:left">79%</td>
-<td style="text-align:center">C9</td>
-<td style="text-align:right">80%</td>
-<td style="text-align:right">CC</td>
-</tr>
-<tr>
-<td style="text-align:left">81%</td>
-<td style="text-align:center">CF</td>
-<td style="text-align:right">82%</td>
-<td style="text-align:right">D1</td>
-</tr>
-<tr>
-<td style="text-align:left">83%</td>
-<td style="text-align:center">D4</td>
-<td style="text-align:right">84%</td>
-<td style="text-align:right">D6</td>
-</tr>
-<tr>
-<td style="text-align:left">85%</td>
-<td style="text-align:center">D9</td>
-<td style="text-align:right">86%</td>
-<td style="text-align:right">DB</td>
-</tr>
-<tr>
-<td style="text-align:left">87%</td>
-<td style="text-align:center">DE</td>
-<td style="text-align:right">88%</td>
-<td style="text-align:right">E0</td>
-</tr>
-<tr>
-<td style="text-align:left">89%</td>
-<td style="text-align:center">E3</td>
-<td style="text-align:right">90%</td>
-<td style="text-align:right">E6</td>
-</tr>
-<tr>
-<td style="text-align:left">91%</td>
-<td style="text-align:center">E8</td>
-<td style="text-align:right">92%</td>
-<td style="text-align:right">EB</td>
-</tr>
-<tr>
-<td style="text-align:left">93%</td>
-<td style="text-align:center">ED</td>
-<td style="text-align:right">94%</td>
-<td style="text-align:right">F0</td>
-</tr>
-<tr>
-<td style="text-align:left">95%</td>
-<td style="text-align:center">F2</td>
-<td style="text-align:right">96%</td>
-<td style="text-align:right">F5</td>
-</tr>
-<tr>
-<td style="text-align:left">97%</td>
-<td style="text-align:center">F7</td>
-<td style="text-align:right">98%</td>
-<td style="text-align:right">FA</td>
-</tr>
-<tr>
-<td style="text-align:left">99%</td>
-<td style="text-align:center">FC</td>
-<td style="text-align:right">100%</td>
-<td style="text-align:right">FF</td>
-</tr>
-</tbody>
-</table>
-<h3 id="常用色"><a href="#常用色" class="headerlink" title="常用色"></a>常用色</h3><p>分享几个常用色配色网站：<a href="http://colorhunt.co/" target="_blank" rel="noopener">Color Hunt</a>、<a href="https://color.adobe.com/" target="_blank" rel="noopener">Adobe Color</a>, <a href="http://colllor.com/" target="_blank" rel="noopener">Colllor</a></p>
-<h3 id="取色器"><a href="#取色器" class="headerlink" title="取色器"></a>取色器</h3><iframe src="http://tools.jb51.net/static/rgbcolor/index.html" id="CenterMainCenter" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" width="100%" height="460px"></iframe>
-
+        
+          <a class="article-more-a" href="/2017/12/22/Alpha对照表-调色板/#more">more >></a>
+        
       
 
       
@@ -527,7 +208,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/21/Alpha对照表+常用颜色/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/22/Alpha对照表-调色板/">展开全文 >></a>
         </p>
       
 

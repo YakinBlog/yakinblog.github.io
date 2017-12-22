@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yakinblog.com">
-  <title>Alpha对照表+常用颜色 | Yakin的博客</title>
+  <title>Alpha对照表+调色板 | Yakin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Alpha对照表，常用颜色">
+  <meta name="description" content="Alpha对照表，调色板">
 <meta name="keywords" content="alpha,color,工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Alpha对照表+常用颜色">
-<meta property="og:url" content="http://yakinblog.com/2017/12/21/Alpha对照表+常用颜色/index.html">
+<meta property="og:title" content="Alpha对照表+调色板">
+<meta property="og:url" content="http://yakinblog.com/2017/12/22/Alpha对照表-调色板/index.html">
 <meta property="og:site_name" content="Yakin的博客">
-<meta property="og:description" content="Alpha对照表，常用颜色">
+<meta property="og:description" content="Alpha对照表，调色板">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
-<meta property="og:updated_time" content="2017-12-22T06:05:04.000Z">
+<meta property="og:updated_time" content="2017-12-22T06:10:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alpha对照表+常用颜色">
-<meta name="twitter:description" content="Alpha对照表，常用颜色">
+<meta name="twitter:title" content="Alpha对照表+调色板">
+<meta name="twitter:description" content="Alpha对照表，调色板">
   
     <link rel="alternative" href="/atom.xml" title="Yakin的博客" type="application/atom+xml">
   
@@ -155,20 +155,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Alpha对照表+常用颜色" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Alpha对照表-调色板" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Alpha对照表+常用颜色
+      Alpha对照表+调色板
     </h1>
   
 
         
-        <a href="/2017/12/21/Alpha对照表+常用颜色/" class="archive-article-date">
-  	<time datetime="2017-12-21T03:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
+        <a href="/2017/12/22/Alpha对照表-调色板/" class="archive-article-date">
+  	<time datetime="2017-12-22T06:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
 </a>
         
       </header>
@@ -177,6 +177,7 @@
       
         <p>一般颜色是由ARGB构成，在程序中可以用8位十六进制值表示，前2位表示A（透明度），后6位表示RGB（颜色）。</p>
 <h3 id="透明度"><a href="#透明度" class="headerlink" title="透明度"></a>透明度</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder str = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> round = Math.round(<span class="number">255</span> * i * <span class="number">1.0f</span> / <span class="number">100f</span>);</span><br><span class="line">    String hexString = Integer.toHexString(round);</span><br><span class="line">    <span class="keyword">if</span> (hexString.length() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        hexString += <span class="string">"0"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    str.append(<span class="string">"|"</span> + i + <span class="string">"%|"</span> + hexString.toUpperCase());</span><br><span class="line">    <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        str.append(<span class="string">"|"</span>);</span><br><span class="line">        System.out.println(str.toString());</span><br><span class="line">        str.delete(<span class="number">0</span>, str.length());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>对照表： </p>
 <table>
 <thead>
@@ -498,7 +499,6 @@
 </table>
 <h3 id="常用色"><a href="#常用色" class="headerlink" title="常用色"></a>常用色</h3><p>分享几个常用色配色网站：<a href="http://colorhunt.co/" target="_blank" rel="noopener">Color Hunt</a>、<a href="https://color.adobe.com/" target="_blank" rel="noopener">Adobe Color</a>, <a href="http://colllor.com/" target="_blank" rel="noopener">Colllor</a></p>
 <h3 id="取色器"><a href="#取色器" class="headerlink" title="取色器"></a>取色器</h3><iframe src="http://tools.jb51.net/static/rgbcolor/index.html" id="CenterMainCenter" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" width="100%" height="460px"></iframe>
-
       
 
       
@@ -601,7 +601,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yakinblog.com/2017/12/21/Alpha对照表+常用颜色/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yakinblog.com/2017/12/22/Alpha对照表-调色板/" alt="微信分享二维码">
     </div>
 </div>
 
