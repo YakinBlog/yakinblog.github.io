@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Yakin的博客">
 <meta property="og:description" content="Hexo+Github搭建个人博客">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
-<meta property="og:updated_time" content="2017-12-23T09:12:02.000Z">
+<meta property="og:updated_time" content="2017-12-23T11:01:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github搭建个人博客">
 <meta name="twitter:description" content="Hexo+Github搭建个人博客">
@@ -269,11 +269,13 @@
 <p>首先如果您的网站已使用了百度统计，您可以使用统计账号登录平台，或者绑定站长平台与百度统计账号，站长平台支持您批量导入百度统计中的站点，您不需要再对网站进行验证。</p>
 <p>百度站长平台为未使用百度统计的站点提供三种验证方式：文件验证、html标签验证、CNAME验证。<br>　　1.文件验证：您需要下载验证文件，将文件上传至您的服务器，放置于域名根目录下。<br>　　2.html标签验证：将html标签添加至网站首页html代码的标签与标签之间。<br>　　3.CNAME验证：您需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。<br>验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。</p>
 </blockquote>
-<p>不管谷歌还是百度都要先添加域名，然后验证网站，这里统一都使用文件验证，就是下载对应的html文件，放到根目录下的source里。</p>
+<h3 id="安装插件自动生成站点地图"><a href="#安装插件自动生成站点地图" class="headerlink" title="安装插件自动生成站点地图"></a>安装插件自动生成站点地图</h3><p>谷歌：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>百度：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
 </blockquote>
-<p>然后部署到服务器，输入地址<a href="http://[域名]/xxxx.html能访问j就可以点击验证按钮。" target="_blank" rel="noopener">http://[域名]/xxxx.html能访问j就可以点击验证按钮。</a></p>
 <h2 id="问题收集"><a href="#问题收集" class="headerlink" title="问题收集"></a>问题收集</h2><h3 id="找不到git部署"><a href="#找不到git部署" class="headerlink" title="找不到git部署"></a>找不到git部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
