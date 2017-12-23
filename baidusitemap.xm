@@ -26,6 +26,8 @@
     </url>
 
     
+    
+    
   <url>
     <loc>http://yakinblog.com/2017/12/22/Alpha%E5%AF%B9%E7%85%A7%E8%A1%A8+%E8%B0%83%E8%89%B2%E6%9D%BF/</loc>
     <lastmod>2017-12-22T06:10:30.000Z</lastmod>
