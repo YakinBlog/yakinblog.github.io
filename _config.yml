@@ -91,6 +91,10 @@ sitemap:
 baidusitemap:
     path: baidusitemap.xm
 
+# RSS
+## sudo npm install hexo-generator-feed --save
+rss: /atom.xml
+
 feed:
     type: atom
     path: atom.xml

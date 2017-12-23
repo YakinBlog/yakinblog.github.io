@@ -156,7 +156,7 @@ site:[域名]
 
 ### 验证网站
 
-搜索引擎入口，[官方介绍](http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title3)：
+搜索引擎入口：
 
 * [Google搜索引擎提交入口](https://www.google.com/webmasters/tools/home?hl=zh-CN)
 
@@ -180,13 +180,13 @@ site:[域名]
 
 > 站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。
 
-谷歌：
+谷歌插件：
 
 ``` bash
 $ npm install hexo-generator-sitemap --save
 ```
 
-百度：
+百度插件：
 
 ``` bash
 $ npm install hexo-generator-baidu-sitemap --save
@@ -199,7 +199,7 @@ $ npm install hexo-generator-baidu-sitemap --save
 sitemap:
   path: sitemap.xml
 baidusitemap:
-  path: baidusitemap.xml
+  path: baidusitemap.xm
 ```
 
 * 让谷歌收录：
@@ -211,6 +211,20 @@ baidusitemap:
 &nbsp;&nbsp;正常情况，是要等百度爬虫来爬到你的网站，才会被收录。但是github屏蔽了百度爬虫，所以我们要主动把网站提交给百度，这就要使用到[百度站长平台](http://zhanzhang.baidu.com/).
 
 &nbsp;&nbsp;在站点验证通过后，选择站点，数据引入 -> 链接提交，选择提交方式。由于github封禁了百度的ip，所以建议使用自动提交。
+
+## RSS
+
+RSS插件：
+
+``` bash
+$ sudo npm install hexo-generator-feed --save
+```
+
+开启RSS功能，编辑根目录下_config.yml，添加如下代码：
+
+``` bash
+rss: /atom.xml #rss地址  默认即可
+```
 
 ## 问题收集
 
@@ -236,18 +250,4 @@ xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer dire
 
 ``` bash
 $ sudo npm install bcrypt
-```
-
-### RSS不显示
-
-安装RSS插件
-
-``` bash
-$ sudo npm install hexo-generator-feed --save
-```
-
-开启RSS功能，编辑hexo/_config.yml，添加如下代码：
-
-``` bash
-rss: /atom.xml #rss地址  默认即可
 ```

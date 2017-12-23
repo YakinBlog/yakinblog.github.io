@@ -7,10 +7,10 @@ menu:
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
+  github: "https://github.com/YakinBlog"
+  weibo: "https://weibo.com/wyoojune"
+  rss: "/atom.xml"
+  #zhihu: "#"
   #qq: "#"
   #weixin: "#"
   #jianshu: "#"
@@ -18,13 +18,11 @@ subnav:
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  #mail: "mailto:litten225@qq.com"
+  #mail: "mailto:yakin.wyj@qq.com"
   #facebook: "#"
   #google: "#"
   #twitter: "#"
   #linkedin: "#"
-
-rss: /atom.xml
 
 # 是否需要修改 root 路径
 # 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
