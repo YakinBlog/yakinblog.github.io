@@ -3,8 +3,6 @@
 
 
     
-    
-    
   <url>
     <loc>http://yakinblog.com/2017/12/21/Hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-12-23T09:12:02.000Z</lastmod>
