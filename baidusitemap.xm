@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://yakinblog.com/2017/12/24/Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2017-12-24T04:31:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown 常用语法</title>
+        <pubTime>2017-12-24T01:49:31.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>markdown</tag>
+         
+        <tag>语法</tag>
+         
+        <tag>标记语言</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yakinblog.com/2017/12/21/Hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-12-23T15:21:03.000Z</lastmod>
     <data>
