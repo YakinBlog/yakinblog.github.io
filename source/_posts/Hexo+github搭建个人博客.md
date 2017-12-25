@@ -226,6 +226,14 @@ $ sudo npm install hexo-generator-feed --save
 rss: /atom.xml #rss地址  默认即可
 ```
 
+## 流程图
+
+flow插件：
+
+``` bash
+$ sudo npm install --save hexo-filter-flowchart
+```
+
 ## 问题收集
 
 ### 找不到git部署

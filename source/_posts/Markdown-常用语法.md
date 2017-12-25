@@ -13,6 +13,8 @@ description: Markdown 常用语法
 * [创始人 John Gruber 的 Markdown 语法说明](https://link.jianshu.com/?t=http://daringfireball.net/projects/markdown/syntax)
 * [Markdown 中文版](https://link.jianshu.com/?t=http://wowubuntu.com/markdown/#list)
 * [Markdown 公式指导手册](https://link.jianshu.com/?t=http://www.liuhaihua.cn/archives/143443.html/)
+* [Flow 流程图](http://flowchart.js.org/)
+* [Sequence 时序图](https://bramp.github.io/js-sequence-diagrams/)
 
 ## 基本语法
 
@@ -253,6 +255,39 @@ description: Markdown 常用语法
 ---
 
 后面的段落
+
+### 流程图
+
+语法：
+
+``` text
+`` ` flow 
+st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op
+`` ` 
+```
+
+示例：
+
+``` flow
+st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+注意：
+
+1. 关键词（start、end、operation、subroutine、condition和inputoutput）后的冒号后要紧跟一个空格
+2. 使用->来连接两个元素，对于condition类型，有yes和no两个分支，如示例中的cond(yes)和cond(no)
 
 ## 进阶语法
 
