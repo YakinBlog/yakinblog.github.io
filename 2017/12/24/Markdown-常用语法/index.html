@@ -17,7 +17,7 @@
 <meta property="og:description" content="Markdown 常用语法">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
 <meta property="og:image" content="http://yakinblog.com/assets/img/avatar-001.jpg">
-<meta property="og:updated_time" content="2017-12-24T04:35:57.000Z">
+<meta property="og:updated_time" content="2017-12-25T07:27:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown 常用语法">
 <meta name="twitter:description" content="Markdown 常用语法">
@@ -186,6 +186,8 @@
 <li><a href="https://link.jianshu.com/?t=http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">创始人 John Gruber 的 Markdown 语法说明</a></li>
 <li><a href="https://link.jianshu.com/?t=http://wowubuntu.com/markdown/#list" target="_blank" rel="noopener">Markdown 中文版</a></li>
 <li><a href="https://link.jianshu.com/?t=http://www.liuhaihua.cn/archives/143443.html/" target="_blank" rel="noopener">Markdown 公式指导手册</a></li>
+<li><a href="http://flowchart.js.org/" target="_blank" rel="noopener">Flow 流程图</a></li>
+<li><a href="https://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="noopener">Sequence 时序图</a></li>
 </ul>
 <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>通常编辑器根据代码片段适配合适的高亮方法，你也可以用 ``` 包裹一段代码，并指定一种语言，如果不需要高亮可以在语言处指定<code>nohighlight</code></p>
 <a id="more"></a>
@@ -437,6 +439,16 @@
 <p>前面的段落</p>
 <hr>
 <p>后面的段落</p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">`` ` flow </span><br><span class="line">st=&gt;start: Start</span><br><span class="line">op=&gt;operation: Your Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">`` `</span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<div id="flowchart-0" class="flow-chart"></div>
+
+<p>注意：</p>
+<ol>
+<li>关键词（start、end、operation、subroutine、condition和inputoutput）后的冒号后要紧跟一个空格</li>
+<li>使用-&gt;来连接两个元素，对于condition类型，有yes和no两个分支，如示例中的cond(yes)和cond(no)</li>
+</ol>
 <h2 id="进阶语法"><a href="#进阶语法" class="headerlink" title="进阶语法"></a>进阶语法</h2><h3 id="行内HTML元素"><a href="#行内HTML元素" class="headerlink" title="行内HTML元素"></a>行内HTML元素</h3><p>目前只支持部分段内 HTML 元素效果，包括 <code>&lt;kdb&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code></p>
 <p>语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt;</span><br><span class="line">&lt;pre&gt;[代码块]&lt;/pre&gt;</span><br><span class="line">&lt;b&gt; Markdown 在此处同样适用，如 *加粗* &lt;/b&gt;</span><br></pre></td></tr></table></figure>
@@ -795,7 +807,14 @@
 </tr>
 </tbody>
 </table>
-<iframe src="https://pandao.github.io/editor.md/examples/simple.html" id="CenterMainCenter" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" width="100%" height="460px"></iframe>
+<p><iframe src="https://pandao.github.io/editor.md/examples/simple.html" id="CenterMainCenter" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" width="100%" height="460px"></iframe></p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
       
 
@@ -1085,6 +1104,18 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">alpha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -1098,18 +1129,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">alpha</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
