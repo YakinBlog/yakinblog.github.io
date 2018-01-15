@@ -4,21 +4,6 @@
 
     
   <url>
-    <loc>http://yakinblog.com/2018/01/12/%E5%86%B2%E9%A1%B6%E5%A4%A7%E4%BC%9A%E7%AD%94%E9%A2%98%E5%8A%A9%E6%89%8B/</loc>
-    <lastmod>2018-01-12T12:05:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>冲顶大会答题助手</title>
-        <pubTime>2018-01-12T11:21:15.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yakinblog.com/2018/01/12/%E7%99%BE%E4%B8%87%E8%8B%B1%E9%9B%84%E7%AD%94%E9%A2%98%E5%8A%A9%E6%89%8B/</loc>
     <lastmod>2018-01-12T12:05:37.000Z</lastmod>
     <data>
