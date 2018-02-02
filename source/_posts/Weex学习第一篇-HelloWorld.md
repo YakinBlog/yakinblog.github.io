@@ -121,6 +121,8 @@ $ npm run dev & npm run serve
 
 工具会自动打开浏览器，即可看到 weex h5 页面。
 
+![](https://weex.apache.org/guide/images/toolkit-preview.png)
+
 ## 目录结构
 
 ``` text
