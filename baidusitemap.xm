@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://yakinblog.com/2018/03/09/Weex%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E7%AF%87-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2018-03-09T11:35:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Weex学习第二篇-基础语法</title>
+        <pubTime>2018-03-09T06:27:28.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Weex</tag>
+         
+        <tag>Vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yakinblog.com/2018/02/01/Weex%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AF%87-HelloWorld/</loc>
     <lastmod>2018-02-02T02:05:13.000Z</lastmod>
     <data>

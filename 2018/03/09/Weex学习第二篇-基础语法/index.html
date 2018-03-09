@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yakinblog.com">
-  <title>Yakin的博客</title>
+  <title>Weex学习第二篇-基础语法 | Yakin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yakin的博客">
-<meta property="og:url" content="http://yakinblog.com/index.html">
+  <meta name="description" content="Weex 是一个使用Web开发体验来开发高性能原生应用的框架">
+<meta name="keywords" content="教程,Weex,Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weex学习第二篇-基础语法">
+<meta property="og:url" content="http://yakinblog.com/2018/03/09/Weex学习第二篇-基础语法/index.html">
 <meta property="og:site_name" content="Yakin的博客">
+<meta property="og:description" content="Weex 是一个使用Web开发体验来开发高性能原生应用的框架">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
+<meta property="og:updated_time" content="2018-03-09T11:35:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yakin的博客">
+<meta name="twitter:title" content="Weex学习第二篇-基础语法">
+<meta name="twitter:description" content="Weex 是一个使用Web开发体验来开发高性能原生应用的框架">
   
     <link rel="alternative" href="/atom.xml" title="Yakin的博客" type="application/atom+xml">
   
@@ -153,16 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Weex学习第二篇-基础语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Weex学习第二篇-基础语法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/09/Weex学习第二篇-基础语法/">Weex学习第二篇-基础语法</a>
+    <h1 class="article-title" itemprop="name">
+      Weex学习第二篇-基础语法
     </h1>
   
 
@@ -190,11 +192,116 @@
 </ul>
 </li>
 </ul>
-        
-          <a class="article-more-a" href="/2018/03/09/Weex学习第二篇-基础语法/#more">more >></a>
-        
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- （必须）页面结构 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  /* (可选) 样式表 */</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  /* (可选) 数据、方法、生命周期定义 */</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"data"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"> /* （可选）定义初始化数据 */</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"config"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"> /* （可选）定义配置项 */</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="视图模板（template）"><a href="#视图模板（template）" class="headerlink" title="视图模板（template）"></a>视图模板（template）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span>&gt;</span>文本<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>template</code> 标签是页面视图的区域标志，内部有且仅有一个根元素，且根元素不能使用 <code>if/repeat</code> 的指示器，目前推荐使用的根元素标签有：</p>
+<ul>
+<li><p><code>&lt;div&gt;</code>：通用根元素。</p>
+</li>
+<li><p><code>&lt;scroller&gt;</code>：一个竖直的，可以容纳多个排成一列的子组件的滚动器。</p>
+</li>
+<li><p><code>&lt;list&gt;</code>：提供垂直列表功能且拥有平滑的滚动和高效的内存管理的长列表的展示器。</p>
+</li>
+</ul>
+<h3 id="标签的通用特性："><a href="#标签的通用特性：" class="headerlink" title="标签的通用特性："></a>标签的通用特性：</h3><ul>
+<li><p>唯一标识：id=”…”。</p>
+</li>
+<li><p>样式：style=”…”。</p>
+</li>
+<li><p>CSS类：class=”…”。</p>
+</li>
+<li><p>数据绑定：”{&nbsp;{var}&nbsp;}” 和 “{&nbsp;{func()}&nbsp;}”。</p>
+</li>
+<li><p>指示器：if=”…”、repeat=”…” 和 append=”…”。</p>
+</li>
+<li><p>事件处理：onxxx=”…”。</p>
+</li>
+</ul>
+<h2 id="样式表-style"><a href="#样式表-style" class="headerlink" title="样式表 (style)"></a>样式表 (style)</h2><p>描述 Weex 页面的样式表，语法是基于 CSS 的，且是一个很小的语法集。</p>
+<p>内部CSS，多个组件上可以复用样式规则：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"txt"</span>&gt;</span>内部CSS<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  .txt &#123;font-size: 64;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>内嵌CSS，强制是scoped即只能作用于当前组件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span> <span class="attr">style</span>=<span class="string">"font-size: 64;"</span>&gt;</span>内嵌CSS<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="页面数据和方法-script"><a href="#页面数据和方法-script" class="headerlink" title="页面数据和方法 (script)"></a>页面数据和方法 (script)</h2><p><code>&lt;script&gt;</code> 标签的内容主要由 data ，methods 以及 created 三 部分组成，分别的含义是结构性数据、自定义方法，以及生命周期的入口，并通过赋值给 module.exports 完成定义。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">module.exports = &#123;</span></span><br><span class="line"><span class="undefined">  data: &#123;</span></span><br><span class="line"><span class="undefined">    ...</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  methods: &#123;</span></span><br><span class="line"><span class="undefined">    ...</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  created: function() &#123;</span></span><br><span class="line"><span class="undefined">    ...</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="data"><a href="#data" class="headerlink" title="data"></a>data</h3><p>data 的值一定是一个结构型数据（JSON 对象）。</p>
+<p>data 对象里的每个字段都可以在 <code>&lt;template&gt;</code> 中和某个标签特性或内容绑定起来。并且在任一方法中通过<code>this</code>上下文来读写。</p>
+<h3 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h3><p>methods 的所有字段都应该是函数类型的。</p>
+<p>methods 里的每个自定义方法同样都可以 <code>&lt;template&gt;</code> 中和某个标签特性绑定起来。并且在任一方法中通过this上下文来调用。</p>
+<h3 id="created"><a href="#created" class="headerlink" title="created"></a>created</h3><p>Weex 暂时提供了一个页面生命周期的入口：</p>
+<p>创建上下文，并赋予访问数据和自定义方法的能力，此时通过this可以存取数据，调用方法。这个入口，等同于老版本的ready自定义方法。</p>
+<h3 id="上下文-this"><a href="#上下文-this" class="headerlink" title="上下文 this"></a>上下文 this</h3><p>通过方法中的上下文 this，我们可以访问到如下内容：</p>
+<ul>
+<li><p>data 中的数据。</p>
+</li>
+<li><p>methods 中的自定义方法。</p>
+</li>
+<li><p>$… 开头的内建接口。</p>
+</li>
+</ul>
+<p>这也意味着，通过 this，我们可以在方法里：</p>
+<ul>
+<li><p>读写 data 中的数据。</p>
+</li>
+<li><p>调用 methods 中的自定义方法。</p>
+</li>
+<li><p>调用 Weex 预置的一些功能。</p>
+</li>
+</ul>
+<h3 id="配置选项"><a href="#配置选项" class="headerlink" title="配置选项"></a>配置选项</h3><p>Weex的配置页面选项标签 <code>&lt;script type=&quot;config&quot;&gt;</code>，目前支持的选型仅有 <a href="https://www.npmjs.com/package/@weex-project/downgrade" target="_blank" rel="noopener">downgrade</a>，用于降级规则的配置。</p>
+<ul>
+<li>downgrade.osVersion</li>
+<li>downgrade.appVersion</li>
+<li>downgrade.weexVersion</li>
+<li>downgrade.deviceModel</li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li><p>支持 setTimeout，但暂不支持 <code>clearTimeout</code>、<code>setInterval</code>、<code>clearInterval</code>、<code>requestAnimationFrame</code>、<code>cancelAnimationFrame</code>。</p>
+</li>
+<li><p>不支持直接操作元素，界面展示逻辑通过数据和状态的改变来描述。</p>
+</li>
+<li><p>暂不支持通过 <code>&lt;script src=&quot;...&quot;&gt;</code> 或 <code>require</code> 等方式引入外部脚本。</p>
+</li>
+</ul>
+<h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><ul>
+<li><a href="http://es6.ruanyifeng.com/?search=%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF&amp;x=0&amp;y=0#README" target="_blank" rel="noopener">ES6</a></li>
+<li><a href="https://cn.vuejs.org/v2/guide/single-file-components.html#%E4%BB%8B%E7%BB%8D" target="_blank" rel="noopener">Vue</a></li>
+</ul>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/pay/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/pay/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -222,16 +329,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/09/Weex学习第二篇-基础语法/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yakinblog.com/2018/03/09/Weex学习第二篇-基础语法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/01/Weex学习第一篇-HelloWorld/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Weex学习第一篇-HelloWorld</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -251,442 +417,14 @@
 
 
 
-
   
-    <article id="post-Weex学习第一篇-HelloWorld" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/01/Weex学习第一篇-HelloWorld/">Weex学习第一篇-HelloWorld</a>
-    </h1>
   
 
-        
-        <a href="/2018/02/01/Weex学习第一篇-HelloWorld/" class="archive-article-date">
-  	<time datetime="2018-02-01T03:58:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Weex 是一个使用 Web 开发体验来开发高性能原生应用的框架。</p>
-</blockquote>
-<p>Weex致力于使开发者能基于当前先进的Web开发技术，使用同一套代码来构建Android、iOS和Web应用，达到一次编写，多端运行。</p>
-<p>Weex的主要目标是跟进当前先进的Web开发和原生开发技术，使生产力和性能共存，让开发Weex界面和开发普通网页一样简单，而渲染Weex页面达到和渲染原生页面一样的效果。架构是解耦的，渲染引擎和语法层是分开的，不依赖任何特定的前端框架，目前主要支持Vue.js和Rax两个前端框架。</p>
-<p>Weex支持原生组件，如<code>&lt;div&gt;</code>这样通用的容器组件，<code>&lt;text&gt;</code>这样常用的文本组件。Weex支持内嵌CSS和内部CSS，内部CSS使用<code>&lt;style&gt;</code>标签声明，而内嵌CSS使用style属性声明，强制是scoped即只能作用于当前组件。</p>
-        
-          <a class="article-more-a" href="/2018/02/01/Weex学习第一篇-HelloWorld/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Weex</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Rax</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/01/Weex学习第一篇-HelloWorld/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Markdown-常用语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/24/Markdown-常用语法/">Markdown 常用语法</a>
-    </h1>
   
 
-        
-        <a href="/2017/12/24/Markdown-常用语法/" class="archive-article-date">
-  	<time datetime="2017-12-24T01:49:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><a href="https://link.jianshu.com/?t=http://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener">Markdown</a> 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。</p>
-</blockquote>
-<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><ul>
-<li><a href="https://link.jianshu.com/?t=http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">创始人 John Gruber 的 Markdown 语法说明</a></li>
-<li><a href="https://link.jianshu.com/?t=http://wowubuntu.com/markdown/#list" target="_blank" rel="noopener">Markdown 中文版</a></li>
-<li><a href="https://link.jianshu.com/?t=http://www.liuhaihua.cn/archives/143443.html/" target="_blank" rel="noopener">Markdown 公式指导手册</a></li>
-<li><a href="http://flowchart.js.org/" target="_blank" rel="noopener">Flow 流程图</a></li>
-<li><a href="https://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="noopener">Sequence 时序图</a></li>
-</ul>
-<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>通常编辑器根据代码片段适配合适的高亮方法，你也可以用 ``` 包裹一段代码，并指定一种语言，如果不需要高亮可以在语言处指定<code>nohighlight</code></p>
-        
-          <a class="article-more-a" href="/2017/12/24/Markdown-常用语法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">语法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">标记语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/24/Markdown-常用语法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Alpha对照表+调色板" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/22/Alpha对照表+调色板/">Alpha对照表+调色板</a>
-    </h1>
   
 
-        
-        <a href="/2017/12/22/Alpha对照表+调色板/" class="archive-article-date">
-  	<time datetime="2017-12-22T06:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一般颜色是由ARGB构成，在程序中可以用8位十六进制值表示，前2位表示A（透明度），后6位表示RGB（颜色）。</p>
-<h3 id="透明度"><a href="#透明度" class="headerlink" title="透明度"></a>透明度</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder str = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> round = Math.round(<span class="number">255</span> * i * <span class="number">1.0f</span> / <span class="number">100f</span>);</span><br><span class="line">    String hexString = Integer.toHexString(round);</span><br><span class="line">    <span class="keyword">if</span> (hexString.length() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        hexString += <span class="string">"0"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    str.append(<span class="string">"|"</span> + i + <span class="string">"%|"</span> + hexString.toUpperCase());</span><br><span class="line">    <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        str.append(<span class="string">"|"</span>);</span><br><span class="line">        System.out.println(str.toString());</span><br><span class="line">        str.delete(<span class="number">0</span>, str.length());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/12/22/Alpha对照表+调色板/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">alpha</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">color</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/22/Alpha对照表+调色板/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo+github搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/21/Hexo+github搭建个人博客/">Hexo+Github搭建个人博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/21/Hexo+github搭建个人博客/" class="archive-article-date">
-  	<time datetime="2017-12-21T03:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是一款基于<a href="https://nodejs.org" target="_blank" rel="noopener">NodeJS</a>的静态博客框架，以下介绍的是在Mac系统下的搭建过程，简单实用，足够满足个人点滴的分享和记录，而无需个人服务器，可绑定域名。</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="必要软件"><a href="#必要软件" class="headerlink" title="必要软件"></a>必要软件</h3><ul>
-<li>XCode：<a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">APP Store</a>下载安装</li>
-<li>Git：XCode内置有git，或者<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网</a>下载</li>
-<li>NodeJS：<a href="https://nodejs.org" target="_blank" rel="noopener">官网</a>下载</li>
-<li>Npm：安装NodeJS时会连带安装</li>
-</ul>
-<h2 id="搭建站点"><a href="#搭建站点" class="headerlink" title="搭建站点"></a>搭建站点</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/12/21/Hexo+github搭建个人博客/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/21/Hexo+github搭建个人博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/21/hello-world/">Hello</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/21/hello-world/" class="archive-article-date">
-  	<time datetime="2017-12-21T03:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://yakinblog.github.io/" target="_blank" rel="noopener">YakinBlog</a>! </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/21/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -712,8 +450,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
