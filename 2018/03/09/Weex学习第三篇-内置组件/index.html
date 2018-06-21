@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yakinblog.com">
-  <title>Tag: github | Yakin的博客</title>
+  <title>Weex学习第三篇-内置组件 | Yakin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yakin的博客">
-<meta property="og:url" content="http://yakinblog.com/tags/github/index.html">
+  <meta name="description" content="Weex 是一个使用Web开发体验来开发高性能原生应用的框架">
+<meta name="keywords" content="教程,Weex,Vue,组件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weex学习第三篇-内置组件">
+<meta property="og:url" content="http://yakinblog.com/2018/03/09/Weex学习第三篇-内置组件/index.html">
 <meta property="og:site_name" content="Yakin的博客">
+<meta property="og:description" content="Weex 是一个使用Web开发体验来开发高性能原生应用的框架">
 <meta property="og:locale" content="yakin.wyj@gmail.com">
+<meta property="og:image" content="https://weex.apache.org/references/images/image-resize-property.png">
+<meta property="og:updated_time" content="2018-03-12T07:26:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yakin的博客">
+<meta name="twitter:title" content="Weex学习第三篇-内置组件">
+<meta name="twitter:description" content="Weex 是一个使用Web开发体验来开发高性能原生应用的框架">
+<meta name="twitter:image" content="https://weex.apache.org/references/images/image-resize-property.png">
   
     <link rel="alternative" href="/atom.xml" title="Yakin的博客" type="application/atom+xml">
   
@@ -153,72 +159,327 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Weex学习第三篇-内置组件" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/21/Hexo+github搭建个人博客/" class="archive-article-date">
-  	<time datetime="2017-12-21T03:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/21/Hexo+github搭建个人博客/">Hexo+Github搭建个人博客</a>
+    <h1 class="article-title" itemprop="name">
+      Weex学习第三篇-内置组件
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/03/09/Weex学习第三篇-内置组件/" class="archive-article-date">
+  	<time datetime="2018-03-09T11:55:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Weex 支持文字、图片、视频等内容型组件，也支持 div、list、scroller 等容器型组件，还包括 slider、input、textarea、switch 等多种特殊的组件。Weex 的界面就是由这些组件以 DOM 树的方式构建出来的。</p>
+</blockquote>
+<p>组件分为<code>内置组件</code>和<code>扩展组件</code>两类，内置组件随Weex SDK提供，提供构建界面的基础能力；如果觉得不够用或者满足不了特定需求，Weex也支持开发者自己创建扩展组件，并通过Weex提供的注册接口将组件集成到应用中使用。</p>
+<a id="more"></a>
+<h2 id="资源路径"><a href="#资源路径" class="headerlink" title="资源路径"></a>资源路径</h2><p>讲组件之前要先介绍下Weex的资源路径用法，包括图像、字体等资源。</p>
+<p>Weex支持相对路径，与 HTML 用法类似，支持/、.、..、//开头相对 URI 将相对于 bunle url 解析。</p>
+<h3 id="本地资源："><a href="#本地资源：" class="headerlink" title="本地资源："></a>本地资源：</h3><p>Weex SDK 提供 local scheme 来访问打包在应用程序中的资源，此 scheme 无法在 H5 环境下使用。目前，开发者可以在 image 组件和字体文件中使用本地资源。</p>
+<ul>
+<li><p>iOS：Weex 会在 bundle resources 中查找。例如，image 组件的 src 属性为 local:///app_icon’， Weex 会加载 bundle resouce 中名为 app_icon 的图像资源，而字体文件也以相同的方式工作。</p>
+</li>
+<li><p>Android：image 组件将从 drawable 资源文件夹加载，如 res/drawable-xxx。但加载字体文件是不同的，Android 框架无法从 res 加载字体文件，因此 SDK 将从 asserts 文件夹加载它。</p>
+</li>
+</ul>
+<h3 id="网络资源："><a href="#网络资源：" class="headerlink" title="网络资源："></a>网络资源：</h3><p>工作方式与 web 相同。</p>
+<h3 id="File："><a href="#File：" class="headerlink" title="File："></a>File：</h3><p>访问本地磁盘文件的方案有其局限性：在不同的平台（iOS，Android）上，不同的设备上，差异很大。</p>
+<h1 id="lt-div-gt"><a href="#lt-div-gt" class="headerlink" title="&lt;div&gt;"></a>&lt;div&gt;</h1><p>组件是用于包装其它组件的最基本容器。</p>
+<blockquote>
+<p>不能在 <code>&lt;div&gt;</code> 中直接添加匿名文本，请用 <code>&lt;text&gt;</code> 包裹文本。</p>
+</blockquote>
+<p>支持所有的通用样式、特性、flexbox 布局。支持所有通用事件。其类似于 HTML 的 <code>&lt;div&gt;</code> 容器，但不能直接在里面添加文本（字符串），如果要展示文本，应该使用 <code>&lt;text&gt;</code> 组件。历史版本中，<code>&lt;div&gt;</code> 别名是 <code>&lt;container&gt;</code>，<strong>目前已经弃用</strong>。</p>
+<p><a href="http://dotwe.org/vue/c3612312e9342dc21ecb3d5e3fcb68c0" target="_blank" rel="noopener">效果预览</a></p>
+<h1 id="lt-image-gt"><a href="#lt-image-gt" class="headerlink" title="&lt;image&gt;"></a>&lt;image&gt;</h1><p>用于在界面中显示单个图片。</p>
+<blockquote>
+<p>注意：在HTML中通常使用的 <code>&lt;img&gt;</code> 标签在 Weex 中不支持，Weex使用 <code>&lt;image&gt;</code>。<br>&nbsp;&nbsp;必须指定样式中的宽度和高度，否则无法工作。</p>
+</blockquote>
+<p>Weex 没有内置的图片下载器，因为相关的下载、缓存、解码机制非常复杂，一些开源的工具如 SDWebImage 已经处理得很好， 所以在使用 <code>&lt;image&gt;</code>之前，请在 native 端先接入相应的 adapter 或者 handler。</p>
+<p><a href="http://dotwe.org/vue/955e1061b698153ed1de60e7673ee210" target="_blank" rel="noopener">效果预览</a></p>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">属性名</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:right">值</th>
+<th style="text-align:right">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">placeholder</td>
+<td style="text-align:center">String</td>
+<td style="text-align:right">{URL / Base64}</td>
+<td style="text-align:right">-</td>
+</tr>
+<tr>
+<td style="text-align:left">resize</td>
+<td style="text-align:center">String</td>
+<td style="text-align:right">cover / contain / stretch</td>
+<td style="text-align:right">-</td>
+</tr>
+<tr>
+<td style="text-align:left">src</td>
+<td style="text-align:center">String</td>
+<td style="text-align:right">{URL / Base64}</td>
+<td style="text-align:right">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="placeholder"><a href="#placeholder" class="headerlink" title="placeholder"></a>placeholder</h3><p>占位图的 URL，当由 src 表示的图片下载完成并展示后将被删除。</p>
+<h3 id="resize"><a href="#resize" class="headerlink" title="resize"></a>resize</h3><p><img src="https://weex.apache.org/references/images/image-resize-property.png" alt="resize"></p>
+<ul>
+<li>contain：缩放图片以完全装入 <code>&lt;image&gt;</code> 区域，可能背景区部分空白。</li>
+<li>cover：缩放图片以完全覆盖 <code>&lt;image&gt;</code> 区域，可能图片部分看不见。</li>
+<li>stretch：默认值. 按照 <code>&lt;image&gt;</code> 区域的宽高比例缩放图片。</li>
+</ul>
+<p>参见: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" target="_blank" rel="noopener">background-size</a></p>
+<h3 id="src"><a href="#src" class="headerlink" title="src"></a>src</h3><p>要显示图片的 URL，该属性是 <code>&lt;image&gt;</code> 组件的强制属性。</p>
+<h1 id="lt-text-gt"><a href="#lt-text-gt" class="headerlink" title="&lt;text&gt;"></a>&lt;text&gt;</h1><p>用来将文本按照指定的样式渲染出来。只能包含文本值, 可以使用 <code>{ { } }</code> 标记插入变量值作为文本内容。</p>
+<blockquote>
+<p>注意： <code>&lt;text&gt;</code> 里直接写文本头尾空白会被过滤，如果需要保留头尾空白，暂时只能通过数据绑定写头尾空格。</p>
+</blockquote>
+<h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>value {string}: 组件的值，与 <code>&lt;text&gt;</code> 标签中的文本内容相同。</li>
+</ul>
+<h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><ul>
+<li>lines {number}: 指定文本行数。默认值是 0， 代表不限制行数。</li>
+<li>支持 color 样式。</li>
+<li>支持 font-size 样式，默认值为32。</li>
+<li>支持 font-style 样式。</li>
+<li>支持 font-weight 样式。</li>
+<li>支持 text-align 样式。</li>
+<li>支持 text-decoration 样式。</li>
+<li>支持 text-overflow 样式。</li>
+<li>支持 line-height样式0.6.1+。</li>
+</ul>
+<h3 id="自定义字体"><a href="#自定义字体" class="headerlink" title="自定义字体"></a>自定义字体</h3><p>支持ttf和woff字体格式的自定义字体, 可以通过调用 dom module 里面的 addRule方法, 构建自定义的font-family使用, addRule 建议在 beforeCreate 或者更早时调用。</p>
+<p><a href="http://dotwe.org/vue/964165062cd80be10a3816eec3e4e274" target="_blank" rel="noopener">效果预览</a><br><a href="http://dotwe.org/vue/a135864b804afd53a6d6d893503a4fee" target="_blank" rel="noopener">定义字体</a></p>
+<h1 id="lt-a-gt"><a href="#lt-a-gt" class="headerlink" title="&lt;a&gt;"></a>&lt;a&gt;</h1><p>用于实现页面间的跳转。</p>
+<blockquote>
+<p>注意： 不能在 <code>&lt;a&gt;</code> 中直接添加匿名文本，请用 <code>&lt;text&gt;</code> 包裹文本。</p>
+</blockquote>
+<h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">属性名</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:right">值</th>
+<th style="text-align:right">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">href</td>
+<td style="text-align:center">String</td>
+<td style="text-align:right">{URL}</td>
+<td style="text-align:right">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="href"><a href="#href" class="headerlink" title="href"></a>href</h3><p>待跳转的页面URL，待跳转页面需要是一个Weex页面。如果待跳转页面是一个普通HTML，这会是一个未定义行为。</p>
+<p><a href="http://dotwe.org/vue/dd9584c57e67f4832a8ea04a307a51af" target="_blank" rel="noopener">效果预览</a></p>
+<h1 id="lt-list-gt"><a href="#lt-list-gt" class="headerlink" title="&lt;list&gt;"></a>&lt;list&gt;</h1><p>提供垂直列表功能的核心组件，拥有平滑的滚动和高效的内存管理，非常适合用于长列表的展示。</p>
+<h3 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h3><ul>
+<li>&lt;cell&gt;</li>
+</ul>
+<p>用于定义列表中的子列表项，类似于 HTML 中的 ul 之于 li。Weex 会对 <code>&lt;cell&gt;</code> 进行高效的内存回收以达到更好的性能。</p>
+<ul>
+<li>header 0.6.1+</li>
+</ul>
+<p>当 <code>&lt;header&gt;</code> 到达屏幕顶部时，吸附在屏幕顶部。</p>
+<ul>
+<li>&lt;refresh&gt;</li>
+</ul>
+<p>用于给列表添加下拉刷新的功能。</p>
+<ul>
+<li>&lt;loading&gt;</li>
+</ul>
+<p><code>&lt;loading&gt;</code> 用法与特性和 <code>&lt;refresh&gt;</code> 类似，用于给列表添加上拉加载更多的功能。</p>
+<p><strong> 注意： </strong></p>
+<p><code>&lt;list&gt;</code> 的子组件只能包括以上四种组件或是 fix 定位的组件，其他形式的组件将不能被正确的渲染。</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/pay/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/pay/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Weex</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">组件</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yakinblog.com/2018/03/09/Weex学习第三篇-内置组件/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/06/21/git-撤销已经push到远端的commit/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          git-撤销已经push到远端的commit
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/03/09/Weex学习第二篇-基础语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Weex学习第二篇-基础语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -244,9 +505,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

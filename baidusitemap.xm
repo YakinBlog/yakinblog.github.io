@@ -4,8 +4,54 @@
 
     
   <url>
+    <loc>http://yakinblog.com/2018/06/21/git-%E6%92%A4%E9%94%80%E5%B7%B2%E7%BB%8Fpush%E5%88%B0%E8%BF%9C%E7%AB%AF%E7%9A%84commit/</loc>
+    <lastmod>2018-06-21T10:58:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>git-撤销已经push到远端的commit</title>
+        <pubTime>2018-06-21T10:46:27.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>git</tag>
+         
+        <tag>push</tag>
+         
+        <tag>commit</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yakinblog.com/2018/02/01/Weex%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AF%87-HelloWorld/</loc>
+    <lastmod>2018-03-12T08:03:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Weex学习第一篇-HelloWorld</title>
+        <pubTime>2018-02-01T03:58:55.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Weex</tag>
+         
+        <tag>Vue</tag>
+         
+        <tag>Rax</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yakinblog.com/2018/03/09/Weex%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E7%AF%87-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2018-03-09T11:35:48.000Z</lastmod>
+    <lastmod>2018-03-12T07:26:47.000Z</lastmod>
     <data>
         <display>
         <title>Weex学习第二篇-基础语法</title>
@@ -25,12 +71,12 @@
 
     
   <url>
-    <loc>http://yakinblog.com/2018/02/01/Weex%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AF%87-HelloWorld/</loc>
-    <lastmod>2018-02-02T02:05:13.000Z</lastmod>
+    <loc>http://yakinblog.com/2018/03/09/Weex%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%89%E7%AF%87-%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6/</loc>
+    <lastmod>2018-03-12T07:26:28.000Z</lastmod>
     <data>
         <display>
-        <title>Weex学习第一篇-HelloWorld</title>
-        <pubTime>2018-02-01T03:58:55.000Z</pubTime>
+        <title>Weex学习第三篇-内置组件</title>
+        <pubTime>2018-03-09T11:55:13.000Z</pubTime>
         
         <tag>教程</tag>
          
@@ -38,7 +84,7 @@
          
         <tag>Vue</tag>
          
-        <tag>Rax</tag>
+        <tag>组件</tag>
          
          
            
