@@ -134,6 +134,21 @@ $ npm run dev & npm run serve
 	entry.js       	# 入口文件
 ``` 
 
+## vue-cli
+
+`weex create [project]` 工具创建的项目在实际开发中并不友好，尤其是对web开发，所以很多人选择使用 [vue-cli](https://github.com/vuejs/vue-cli) 搭建。
+
+
+[template](https://github.com/vuejs-templates/webpack):
+
+``` shell
+$ npm install -g vue-cli
+$ vue init webpack my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+``` 
+
 ## 相关资料
 
 - [搭建开发环境](http://weex.apache.org/cn/guide/set-up-env.html)
