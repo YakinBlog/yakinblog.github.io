@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yakinblog.com/"/>
-  <updated>2018-06-21T10:58:12.000Z</updated>
+  <updated>2018-11-19T12:18:45.000Z</updated>
   <id>http://yakinblog.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git提交丢失找回</title>
+    <link href="http://yakinblog.com/2018/11/19/git%E6%8F%90%E4%BA%A4%E4%B8%A2%E5%A4%B1%E6%89%BE%E5%9B%9E/"/>
+    <id>http://yakinblog.com/2018/11/19/git提交丢失找回/</id>
+    <published>2018-11-19T12:18:18.000Z</published>
+    <updated>2018-11-19T12:18:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>有同事在使用Sourcetree中，进行一次代码提交后(并未push到远程)，发现分支不对，重置了提交，可能是选择了混合合并(感觉更像是强行合并)，结果提交的代码都丢失了</p><p>解决方法如下： </p><ul><li>启动命令行模式，执行如下命令，查看丢失的commit还在不在：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure><ul><li><p>如果在，恭喜你代码还可以找回，copy提交的丢失记录里最早的一次commit id备用。</p></li><li><p>在当前分支基础上点击新建分支，勾选“指定的提交”，填入刚刚copy的commit id，点击“创建分支”。</p></li></ul><p>见证奇迹~</p>]]></content>
+    
+    <summary type="html">
+    
+      git提交丢失找回
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yakinblog.com/tags/git/"/>
+    
+      <category term="push" scheme="http://yakinblog.com/tags/push/"/>
+    
+      <category term="sourcetree" scheme="http://yakinblog.com/tags/sourcetree/"/>
+    
+  </entry>
   
   <entry>
     <title>git-撤销已经push到远端的commit</title>
@@ -169,30 +193,6 @@
       <category term="color" scheme="http://yakinblog.com/tags/color/"/>
     
       <category term="工具" scheme="http://yakinblog.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git提交丢失找回</title>
-    <link href="http://yakinblog.com/2017/12/22/git%E6%8F%90%E4%BA%A4%E4%B8%A2%E5%A4%B1%E6%89%BE%E5%9B%9E/"/>
-    <id>http://yakinblog.com/2017/12/22/git提交丢失找回/</id>
-    <published>2017-12-22T06:08:19.000Z</published>
-    <updated>2018-11-19T12:15:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>有同事在使用Sourcetree中，进行一次代码提交后(并未push到远程)，发现分支不对，重置了提交，可能是选择了混合合并(感觉更像是强行合并)，结果提交的代码都丢失了</p><p>解决方法如下： </p><ul><li>启动命令行模式，执行如下命令，查看丢失的commit还在不在：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure><ul><li><p>如果在，恭喜你代码还可以找回，copy提交的丢失记录里最早的一次commit id备用。</p></li><li><p>在当前分支基础上点击新建分支，勾选“指定的提交”，填入刚刚copy的commit id，点击“创建分支”。</p></li></ul><p>见证奇迹~</p>]]></content>
-    
-    <summary type="html">
-    
-      git提交丢失找回
-    
-    </summary>
-    
-    
-      <category term="git" scheme="http://yakinblog.com/tags/git/"/>
-    
-      <category term="push" scheme="http://yakinblog.com/tags/push/"/>
-    
-      <category term="sourcetree" scheme="http://yakinblog.com/tags/sourcetree/"/>
     
   </entry>
   
