@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://yakinblog.com/2017/12/22/git%E6%8F%90%E4%BA%A4%E4%B8%A2%E5%A4%B1%E6%89%BE%E5%9B%9E/</loc>
+    <lastmod>2018-11-19T12:15:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>git提交丢失找回</title>
+        <pubTime>2017-12-22T06:08:19.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>push</tag>
+         
+        <tag>sourcetree</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yakinblog.com/2018/06/21/git-%E6%92%A4%E9%94%80%E5%B7%B2%E7%BB%8Fpush%E5%88%B0%E8%BF%9C%E7%AB%AF%E7%9A%84commit/</loc>
     <lastmod>2018-06-21T10:58:12.000Z</lastmod>
     <data>
